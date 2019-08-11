@@ -27,6 +27,8 @@
 		5701AA1C22FF8BBC006363F7 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5701AA1B22FF8BBC006363F7 /* ToDoViewController.swift */; };
 		5701AA1F22FF8EE8006363F7 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5701AA1D22FF8EE8006363F7 /* Realm.framework */; };
 		5701AA2022FF8EE8006363F7 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5701AA1E22FF8EE8006363F7 /* RealmSwift.framework */; };
+		5701AA2223005447006363F7 /* CoreDataToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5701AA2123005447006363F7 /* CoreDataToDoViewController.swift */; };
+		5701AA46230060B5006363F7 /* Weather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5701AA44230060B5006363F7 /* Weather.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		5701AA1B22FF8BBC006363F7 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 		5701AA1D22FF8EE8006363F7 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		5701AA1E22FF8EE8006363F7 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		5701AA2123005447006363F7 /* CoreDataToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataToDoViewController.swift; sourceTree = "<group>"; };
+		5701AA45230060B5006363F7 /* Weather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Weather.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 		5701A9CF22FE166F006363F7 /* Wether */ = {
 			isa = PBXGroup;
 			children = (
+				5701AA44230060B5006363F7 /* Weather.xcdatamodeld */,
 				5701A9D022FE166F006363F7 /* AppDelegate.swift */,
 				5701A9D222FE166F006363F7 /* ViewController.swift */,
 				5701A9D422FE166F006363F7 /* Main.storyboard */,
@@ -106,6 +111,7 @@
 				5701AA0122FEEFE5006363F7 /* DayWeatherTableViewCell.swift */,
 				5701AA1922FF8643006363F7 /* UserDefaultsViewController.swift */,
 				5701AA1B22FF8BBC006363F7 /* ToDoViewController.swift */,
+				5701AA2123005447006363F7 /* CoreDataToDoViewController.swift */,
 			);
 			path = Wether;
 			sourceTree = "<group>";
@@ -219,6 +225,7 @@
 			files = (
 				5701A9D322FE166F006363F7 /* ViewController.swift in Sources */,
 				5701A9EC22FE1C47006363F7 /* BlackStarViewController.swift in Sources */,
+				5701AA2223005447006363F7 /* CoreDataToDoViewController.swift in Sources */,
 				5701A9F022FE1D5A006363F7 /* CategoriesLoader.swift in Sources */,
 				5701A9F622FE2F35006363F7 /* StandartWayViewController.swift in Sources */,
 				5701AA0022FEE458006363F7 /* WeatherResponseObject.swift in Sources */,
@@ -228,6 +235,7 @@
 				5701AA0222FEEFE5006363F7 /* DayWeatherTableViewCell.swift in Sources */,
 				5701A9F822FE2F5F006363F7 /* WetherLoader.swift in Sources */,
 				5701A9EE22FE1C76006363F7 /* AlamofireViewController.swift in Sources */,
+				5701AA46230060B5006363F7 /* Weather.xcdatamodeld in Sources */,
 				5701A9F222FE20C1006363F7 /* CategoryTableViewCell.swift in Sources */,
 				5701A9F422FE222A006363F7 /* Category.swift in Sources */,
 			);
@@ -437,6 +445,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5701AA44230060B5006363F7 /* Weather.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5701AA45230060B5006363F7 /* Weather.xcdatamodel */,
+			);
+			currentVersion = 5701AA45230060B5006363F7 /* Weather.xcdatamodel */;
+			path = Weather.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5701A9C522FE166F006363F7 /* Project object */;
 }
