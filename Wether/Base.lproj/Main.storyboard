@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1wZ-gH-dL8">
-                                <rect key="frame" x="50" y="64" width="275" height="210"/>
+                                <rect key="frame" x="50" y="64" width="275" height="255"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SoJ-Rg-wi0">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="30"/>
@@ -59,6 +59,14 @@
                                         <state key="normal" title="ToDo"/>
                                         <connections>
                                             <segue destination="jIw-6d-n5z" kind="show" id="lwi-TO-3tq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdG-AT-53N">
+                                        <rect key="frame" x="0.0" y="225" width="275" height="30"/>
+                                        <color key="backgroundColor" red="0.56610313225431552" green="0.47572652743410831" blue="0.88596526015228427" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="CoreData ToDo"/>
+                                        <connections>
+                                            <segue destination="BZo-e8-g3W" kind="show" id="LSa-b9-BEr"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -144,7 +152,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="kl1-c8-qzp"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Create"/>
                                 <connections>
                                     <action selector="onSave:" destination="jIw-6d-n5z" eventType="touchUpInside" id="gKu-N5-MXw"/>
                                 </connections>
@@ -174,6 +182,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7je-Ic-5pC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1744.8" y="131.78410794602701"/>
+        </scene>
+        <!--Core Data To Do View Controller-->
+        <scene sceneID="bsy-iW-kqL">
+            <objects>
+                <viewController id="BZo-e8-g3W" customClass="CoreDataToDoViewController" customModule="Wether" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T2t-Rv-YDi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1UC-Xa-u2q">
+                                <rect key="frame" x="30" y="84" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PN1-3L-dAL">
+                                <rect key="frame" x="215" y="144" width="130" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="iQh-FV-zAG"/>
+                                </constraints>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="onToDoCreate:" destination="BZo-e8-g3W" eventType="touchUpInside" id="cPj-YZ-KuM"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mRD-2R-NoT">
+                                <rect key="frame" x="16" y="517" width="343" height="130"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="v2W-Ic-1k3" firstAttribute="trailing" secondItem="1UC-Xa-u2q" secondAttribute="trailing" constant="30" id="1xg-Va-Yvj"/>
+                            <constraint firstItem="v2W-Ic-1k3" firstAttribute="trailing" secondItem="mRD-2R-NoT" secondAttribute="trailing" constant="16" id="5jg-O3-FGo"/>
+                            <constraint firstItem="PN1-3L-dAL" firstAttribute="trailing" secondItem="1UC-Xa-u2q" secondAttribute="trailing" id="6Fc-bt-09c"/>
+                            <constraint firstItem="1UC-Xa-u2q" firstAttribute="top" secondItem="v2W-Ic-1k3" secondAttribute="top" constant="20" id="eLp-3z-eBN"/>
+                            <constraint firstItem="1UC-Xa-u2q" firstAttribute="leading" secondItem="v2W-Ic-1k3" secondAttribute="leading" constant="30" id="fKk-HV-UMj"/>
+                            <constraint firstItem="v2W-Ic-1k3" firstAttribute="bottom" secondItem="mRD-2R-NoT" secondAttribute="bottom" constant="20" id="fLN-9o-mq9"/>
+                            <constraint firstItem="PN1-3L-dAL" firstAttribute="top" secondItem="1UC-Xa-u2q" secondAttribute="bottom" constant="30" id="joa-hQ-TnO"/>
+                            <constraint firstItem="mRD-2R-NoT" firstAttribute="leading" secondItem="v2W-Ic-1k3" secondAttribute="leading" constant="16" id="sGF-ma-f38"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="v2W-Ic-1k3"/>
+                    </view>
+                    <connections>
+                        <outlet property="stackView" destination="mRD-2R-NoT" id="oYh-Hd-nJ5"/>
+                        <outlet property="textView" destination="1UC-Xa-u2q" id="q7w-ml-Lmc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6W1-gY-LJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2540" y="131.78410794602701"/>
         </scene>
         <!--Standart Way View Controller-->
         <scene sceneID="Caq-F4-W6q">
