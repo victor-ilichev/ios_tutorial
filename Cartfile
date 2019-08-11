@@ -3,3 +3,6 @@ github "Alamofire/Alamofire" ~> 4.7.2
 
 #Alamofire 
 github "Alamofire/AlamofireImage" ~> 3.5
+
+#Realm
+github "realm/realm-cocoa"
