@@ -20,8 +20,11 @@ class WetherLoader {
                 let decoder = JSONDecoder()
                 
                 if let weatherresponseObject = try? decoder.decode(WeatherResponseObject.self, from: data) {
+                    print("callBack call, waiting 5 seconds")
+                    usleep(5000000)
+                    print("callBack go to main thread")
                     DispatchQueue.main.async {
-                        print("callBack call")
+                        
                         callBack(weatherresponseObject)
                     }
                 } else {
